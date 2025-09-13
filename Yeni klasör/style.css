@@ -1,0 +1,232 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 30px 0 20px 0;
+  font-size: 2em;
+  text-shadow: 2px 2px #000;
+  text-align: center;
+}
+
+
+.container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+.controls {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.controls input, .controls select {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+}
+
+
+
+.preview {
+  flex: 2;
+  min-width: 400px;
+  height: 450px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+
+#box {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle at top left, #ff7eb9, #ff758c);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+.code {
+  margin-top: 15px;
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+pre {
+  overflow-x: auto;
+}
+select {
+  appearance: none; /* Tarayıcı varsayılan stilini kaldır */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: linear-gradient(135deg, #1DB954, #1ed760);
+  color: #000000;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+
+select:hover, select:focus {
+  box-shadow: 0 0 10px #1DB954;
+  transform: scale(1.05);
+  outline: none;
+}
+
+
+select::-ms-expand {
+  display: none; 
+}
+
+select::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #000000;
+  font-size: 12px;
+}
+input[type="number"], select {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: linear-gradient(135deg, #1DB954, #1ed760);
+  color: #000000;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+input[type="number"]:hover,
+input[type="number"]:focus,
+select:hover,
+select:focus {
+  box-shadow: 0 0 12px #1DB954;
+  transform: scale(1.05);
+  outline: none;
+}
+
+
+select::-ms-expand { display: none; }
+select::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #000000;
+  font-size: 12px;
+}
+
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  position: relative;
+}
+
+
+button {
+  background: linear-gradient(135deg, #1DB954, #1ed760);
+  color: #000000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #1DB954;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.code {
+  margin-top: 15px;
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 0;        
+  overflow: hidden;       
+  transition: max-height 0.5s ease; 
+}
+
+
+.code.show {
+  max-height: 400px;    
+}
+
+
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
